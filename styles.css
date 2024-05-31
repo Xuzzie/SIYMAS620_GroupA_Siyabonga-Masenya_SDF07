@@ -1,23 +1,206 @@
-/* Base Styles */
 
 :root {
     font-size: 10px;
 }
 
-*,
+
 *::before,
 *::after {
     box-sizing: border-box;
+   
 }
 
 body {
-    font-family: "Open Sans", Arial, sans-serif;
-    min-height: 100vh;
-    background-color: #fafafa;
-    color: #262626;
-    padding-bottom: 3rem;
+    font-family: 'DM Sans', sans-serif; /* googled and saw that instagram uses dmsans*/
+    min-height: 100vh; 
+    background-color: #ffffff; 
+    color: #262626; 
+    padding-bottom: 3rem; 
+    margin: 0; 
+    
 }
 
-img {
-    display: block;
+/* I made this so i can center everything on the page  */
+.container {
+    max-width: 5x; 
+    width: 90%; /* remember siya this will create the boundries for the webapp */
+    margin: auto; 
+ 
 }
+
+/* Adds some space above and below the header section if i remove it everything starts at the top of the page  */
+header {
+    margin: 2rem 0;
+}
+
+
+
+
+.profile-image {
+
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+    border: 10px solid rgb(91, 114, 91);
+    overflow: hidden; 
+}
+
+.profile {
+    display: flex; 
+    align-items: center; 
+    flex-wrap: wrap; /* This allows me to wrap the pictures or maybe in another scenario text to wrap */
+    gap: 1rem; /*  this creates a gap between the  prolfe section and the images */
+}
+
+
+.profile-image img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+
+.profile-user-settings {
+    flex: 1; /* Makes this section grow to fill the available space  so*/
+}
+
+
+.profile-user-name {
+    font-size: 2.4rem; 
+    font-weight: 500; /* Makes the font bold */
+}
+
+.profile-edit-btn,
+.profile-settings-btn { 
+    /* might be simple but you dont have to make two different divs you can just  put a comma and it can universaly affect two different classes  */
+    font-size: 1.4rem; 
+    padding: 0.5rem 1rem; 
+    margin-left: 1rem; 
+    border: 1px solid #dbdbdb; 
+    border-radius: 4px; 
+    background-color: #fff; 
+    cursor: pointer; 
+}
+
+.profile-stats li {
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-right: 4rem;
+    cursor: pointer;
+}
+
+
+
+.profile-stats ul {
+    display: flex; 
+    padding: 0; 
+    margin: 0; 
+}
+
+
+.profile-stats li {
+    font-size: 1.6rem; 
+}
+
+
+.profile-stat-count {
+    font-weight: 600; /* weight is just another term to mae somthing bold please remeber siya */
+}
+
+
+.profile-bio {
+    margin-top: 1rem; /* Adds space above the bio section */
+    font-size: 1.6rem; /* Sets the font size */
+}
+
+
+
+/* dont touch this second section  we will focus on this grid things yoh its tense . it took you a long time to figuire this out . */
+
+.gallery {
+    display: grid; /* Uses grid layout for the gallery */
+    grid-template-columns: repeat(auto-fill, minmax(293px, 1fr)); /* Defines columns i need to understand this better  */
+    grid-gap: 28px; /* Adds space between the grid items */
+}
+
+/* Styles for the images in the gallery */
+.gallery-image {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; /
+}
+
+
+/* dont touch this */
+
+
+
+
+
+
+
+
+
+.gallery-item {
+    position: relative;
+    cursor: pointer;
+}
+
+
+.gallery-item-info {
+    display: none; /* display and the none  feature means  info will be made invisible remeber that siya*/
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white; 
+}
+
+/* Show the overlay on hover , I need to study this further im confused  */
+.gallery-item:hover .gallery-item-info {
+    display: flex;
+}
+
+.gallery-item-likes,
+.gallery-item-comments {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
+
+.loader {
+    width: 30px;
+    height: 30px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    border-right-color: rgb(0, 0, 0);
+    margin: 0 auto;
+    margin-top: 3rem;
+    animation: loader 0.8s linear infinite;
+}
+
+@keyframes loader {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .profile {
+        flex-wrap: wrap;
+        padding: 3rem 0;
+    }
+}
+
