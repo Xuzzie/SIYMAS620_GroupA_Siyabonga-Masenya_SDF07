@@ -1,51 +1,44 @@
-# [SDF07] Project: CodeSpace Pets Instagram Profile
+README
+Overview
+This CSS code is designed to create a visually appealing profile page layout similar to Instagram. It includes styling for profile sections, a responsive gallery grid for images, and an overlay feature that displays additional information on hover. The key components are organized into sections to maintain clarity and modularity.
 
-Welcome to the CodeSpace Pets Instagram Profile project, where you'll get hands-on experience applying CSS layout concepts. In this project, we will have fun recreating a simplified version of an Instagram user profile page. You aim to practice using CSS for styling and layout to create a visually appealing and responsive web page.
-
-**Check out the Starter Code:** [CodeSpace-Academy/Module_7_StudentNo_Classcode_Group_Name-Surname_SDF07 (github.com)](https://github.com/CodeSpace-Academy/Module_7_StudentNo_Classcode_Group_Name-Surname_SDF07)
-
-![!\[alt text\](CodeSpacePetsInstagram.gif)](CodeSpacePetsInstagram.gif)
-
-**What You'll Learn:**
-
-- Apply CSS styling to an HTML structure to achieve a design resembling an Instagram profile.
-- Demonstrate proficiency in CSS layout techniques, including flexbox and grid.
-- Create a responsive web page that adapts to different screen sizes.
-- Practice using basic HTML and CSS to create a cohesive user interface.
-
-**Project Requirements:**
-
-1. **Start with Provided HTML**: You'll begin with a starter HTML code provided in the project. 
-2. **CSS Styling**: Your task is to write CSS code to style the HTML elements and create the desired layout. Pay attention to the following:
-    - Positioning and styling the profile image.
-    - Styling the user's profile information, including username, bio, and stats.
-    - Creating a responsive layout for the gallery section.
-    - Implementing hover and focus effects for interactive elements.
-    - Add a dynamic loading wheel at the bottom of the gallery.
-3. **Responsive Design**:
-    - Ensure your web page looks good and functions properly on desktop and mobile devices.
-    - Implement responsive design using media queries, making adjustments for smaller screens.
-4. **CSS Features**:
-    - Explore CSS features such as `box-sizing`, `flexbox`, and `grid` layout where they are suitable.
-    - Apply appropriate font sizes, colors, and spacing to achieve a visually pleasing design.
-
-**Deliverables:**
-
-1. **Styled Web Page**: Your main output should be a styled web page closely resembling an Instagram profile, using the provided HTML and reference video as a starting point.
-2. **CSS Code**: Submit your CSS code as a separate file or within the HTML file's `<style>` tags.
-   
-**What to Hand In | Submit**
-
-You will submit the GitHub project link with your final project files to the LMS. 
-
-1. Clone the starter code.
-2. Make sure your repository is public.
-3. Code your solution.
-4. Submit all your changes to your GitHub project repo.
-5. Submit your GitHub repo link to the LMS.
-
-**HOW to submit your project**
-
-1. Submit the GitHub project link with your final project files to the LMS. You will find this in the LMS [**[Projects](https://learn.codespace.co.za/projects)**] tab.
-
-Enjoy the project, and have fun turning HTML into a stylish Instagram profile!
+Structure and Styling
+Root and Global Styles
+: Sets the base font size to 10px for easy scaling.
+*::before, *::after: Ensures all elements use the border-box sizing model.
+Body
+body: Uses 'DM Sans' font, a full viewport height, a white background, dark gray text, and padding at the bottom.
+Container
+.container: Centers the content with a maximum width and 90% width for responsiveness.
+Header
+header: Adds vertical spacing to the header section.
+Profile Section
+.profile-image: Styles the profile image with specific dimensions, rounded corners, and a border.
+.profile: Uses flexbox for alignment and wrapping, ensuring flexibility and spacing.
+.profile-image img: Ensures the image covers its container proportionally.
+.profile-user-settings: Uses flex-grow to occupy available space.
+.profile-user-name: Sets font size and weight for the username.
+.profile-edit-btn, .profile-settings-btn: Styles the buttons uniformly with padding, border, and background.
+.profile-stats ul: Displays stats in a horizontal line without padding or margin.
+.profile-stats li: Styles individual stats items with font size and line height.
+.profile-stat-count: Makes the count bold.
+.profile-bio: Adds top margin and sets the font size for the bio section.
+Gallery Section
+.gallery: Implements a grid layout for the gallery, with dynamic columns and spacing.
+.gallery-image: Ensures images fill their container while maintaining aspect ratio.
+Overlay Feature
+.gallery-item: Positions the gallery items relative and makes them clickable.
+.gallery-item-info: Initially hides the overlay content. Centers content within the overlay, positions it absolutely, and styles it with a semi-transparent background and white text.
+.gallery-item
+.gallery-item-info: Displays the overlay on hover using flexbox.
+.gallery-item-likes, .gallery-item-comments: Aligns the likes and comments icons vertically.
+Loader Animation
+.loader: Styles the loader with specific dimensions, border, and animation.
+@keyframes loader: Defines the rotating animation for the loader.
+Media Queries
+@media screen and (max-width: 900px): Adjusts the profile section for smaller screens, allowing wrapping and padding adjustments.
+Notes
+The grid-template-columns in the gallery section uses auto-fill and minmax to create a responsive grid.
+The display: none property hides elements initially, and display: flex shows them on hover.
+Flexbox properties ensure alignment and centering within various sections.
+The loader animation is a simple rotating circle.
